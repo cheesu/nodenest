@@ -26,11 +26,57 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## directory
+
+````plaintext
+src/
+|-- app.module.ts
+|-- main.ts
+|-- common/
+|   |-- filters/
+|   |-- guards/
+|   |-- decorators/
+|   |-- pipes/
+|   |-- interceptors/
+|   |-- middleware/
+|-- modules/
+    |-- user/
+    |   |-- dto/
+    |   |   |-- create-user.dto.ts
+    |   |   |-- update-user.dto.ts
+    |   |-- entities/
+    |   |   |-- user.entity.ts
+    |   |-- user.controller.ts
+    |   |-- user.module.ts
+    |   |-- user.service.ts
+    |-- product/
+        |-- dto/
+        |   |-- create-product.dto.ts
+        |   |-- update-product.dto.ts
+        |-- entities/
+        |   |-- product.entity.ts
+        |-- product.controller.ts
+        |-- product.module.ts
+        |-- product.service.ts
+
+
+src/: 소스 코드를 담고 있는 최상위 디렉토리입니다.
+app.module.ts: 애플리케이션의 루트 모듈입니다.
+main.ts: 애플리케이션의 진입점입니다.
+common/: 여러 모듈에서 공통적으로 사용되는 커스텀 데코레이터, 필터, 가드, 파이프, 인터셉터, 미들웨어 등을 담고 있습니다.
+modules/: 애플리케이션의 각 기능별 모듈을 담고 있는 디렉토리입니다. 각 모듈은 독립적으로 기능을 구현하며, 필요에 따라 다른 모듈과의 관계를 정의할 수 있습니다.
+user/, product/: 특정 기능을 담당하는 모듈 디렉토리 예시입니다. 각 모듈 내에서는 다음과 같이 구성됩니다:
+dto/: Data Transfer Object. 클라이언트와 서버 간에 데이터를 전송하는 객체의 정의를 담고 있습니다.
+entities/: 데이터베이스의 모델/엔티티 정의를 담고 있습니다.
+_.controller.ts: HTTP 요청을 처리하고 응답을 반환하는 컨트롤러입니다.
+_.module.ts: 해당 모듈의 메인 파일로, 모듈의 컨트롤러와 서비스를 NestJS에 등록합니다.
+\*.service.ts: 비즈니스 로직을 처리하는 서비스입니다.
+
 ## Installation
 
 ```bash
 $ npm install
-```
+````
 
 ## Running the app
 
