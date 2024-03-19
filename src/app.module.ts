@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UsersModule } from './modules/users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { ChatAiModule } from './modules/chatAi/chatAi.module';
+import { BoardModule } from './board/board.module';
 
 @Module({
   imports: [
@@ -14,6 +15,8 @@ import { ChatAiModule } from './modules/chatAi/chatAi.module';
     }),
 
     ChatAiModule,
+
+    BoardModule,
   ],
   controllers: [AppController],
   providers: [AppService],
