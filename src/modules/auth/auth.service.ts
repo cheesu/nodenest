@@ -9,7 +9,6 @@ export class AuthService {
 
   // 사용자 인증 로직 (예시)
   async validateUser(username: string, pass: string): Promise<any> {
-    console.log('first', username, pass);
     // 여기서는 단순화를 위해 하드코딩된 사용자 정보를 사용
     const user = { id: 1, username: 'test', password: '1234test' };
 

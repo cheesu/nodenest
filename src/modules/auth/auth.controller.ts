@@ -9,7 +9,6 @@ export class AuthController {
   //로그인 요청 컨틀롤러 함수
   @Post('login')
   async login(@Body() loginDto: LoginDto) {
-    console.log('first', loginDto);
     return this.authService.login(loginDto);
   }
 
